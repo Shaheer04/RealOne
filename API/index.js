@@ -40,6 +40,15 @@ async function run() {
 
     // Wait for the element with class "review-content" to be loaded
     //await page.waitForSelector('.review-content');
+    await page.waitForSelector('.item-gallery');
+    const descimg = await page.$$eval('.item-gallery', (descimg) => {
+      return descimg.map(descimg => {
+          const images = Array.from(descimg.querySelectorAll('img'))
+              .map(img => img.getAttribute('src'));
+          return { images };
+      });
+    });
+
 
     // Extract the reviews from the page
     await page.waitForSelector('.review-content');
@@ -52,21 +61,29 @@ async function run() {
         });
     });
 
-    console.log(reviews);
 
+    descimage = descimg[0].images;
     imgs = reviews[0].images;
     imgfilter = imgs.filter((img) => img.startsWith('https://'));
+    productimage = descimage.filter((descimage) => descimage.startsWith('https://'));
 
     text = reviews[0].textContent.split('ago...');
+    textArray = text.filter(function(item, pos, self) {
+        return self.indexOf(item) == pos;
+    })
+    
 
 
-    console.log(text);
+    console.log(productimage);
+    console.log(textArray);
     console.log(imgfilter);
 
     await browser.close();
 
 
 }
+
+run();
 
 const port = process.env.PORT || 3000;
 app.listen(port, () => {
