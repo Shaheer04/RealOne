@@ -1,0 +1,20 @@
+{
+  "name": "real-one-api",
+  "version": "1.0.0",
+  "description": "This extension collects product reviews and condenses them into concise summaries, facilitating efficient analysis and decision-making.",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon index.js",
+    "start": "nodemon index.js"
+  },
+  "author": "alpha-zero",
+  "license": "ISC",
+  "dependencies": {
+    "@google/generative-ai": "^0.10.0",
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.0"
+  }
+}

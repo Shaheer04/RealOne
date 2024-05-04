@@ -1,0 +1,24 @@
+{
+    "name": "Real One",
+    "short_name": "Real One",
+    "description": "This extension collects product reviews and condenses them into concise summaries, facilitating efficient analysis and decision-making.",
+    "default_locale": "en",
+    "homepage_url": "http://chrome.google.com/webstore",
+    "version": "0.0.1",
+    "version_name": "0.0.1",
+    "manifest_version": 3,
+    "minimum_chrome_version": "88",
+    "permissions": [],
+    "icons": {
+        "128": "assets/img/128x128.png"
+    },
+    "action": {
+        "default_icon": {
+            "16": "assets/img/16x16.png",
+            "24": "assets/img/24x24.png",
+            "32": "assets/img/32x32.png"
+        },
+        "default_popup": "popup.html",
+        "default_title": "Real One"
+    }
+}
