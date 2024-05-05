@@ -1,18 +1,21 @@
-A chromium based extension, created to optimise online buying experience. 
-Product reviews can be alot to read and getting a sense of the product quality and authenticity can be challenging. 
-This extension sumarizes image reviews and text reviews, gives them a score of how much the delivered product matches the product shown by the seller.
+# Introduction
+A chromium-based extension, created to optimize online buying experience. 
+Product reviews can be a lot to read and getting a sense of the product quality and authenticity can be challenging. 
+This extension summarizes image reviews and text reviews and gives them a score of how much the delivered product matches the product shown by the seller.
 Gemini is used as the base model for analysis of text and images.
 
 
-Install Node Packages:
+# Install Node Packages:
 1.	Install Node.js: Download and install Node.js from the official website. Node.js comes with npm (Node Package Manager) bundled with it. 
 https://nodejs.org/en/download
 2.	Install Required Packages: Use npm to install the required packages for your project. For a web scraping extension using Puppeteer. Install Puppeteer by typing this command at the terminal:
     npm install puppeteer
-3.	Start NPM: After installing packages, you can start using NPM commands.
+3.	Create a .env file in the API directory which will contain Gemini's API Key:
+       - API_Key=[API-Key]
+4. Start NPM: After installing packages, you can start using NPM commands.
 
 
-Importing the extension into Chrome/Edge
+# Importing the extension into Chrome/Edge
 1.	Download the extension files: Clone this repository by typing in “git clone https://github.com/SyedShahriyarAli/RealOne” in a command prompt at the destination you want to download the files
 2.	Open Chrome Extensions page: Open Google Chrome and go to the "Extensions" page. You can access it by clicking the three dots in the top-right corner, then selecting "More tools" > "Extensions," or by typing chrome://extensions/ in the address bar and hitting Enter.
 3.	Enable Developer Mode: Toggle on the "Developer mode" option located in the top-right corner of the Extensions page.
