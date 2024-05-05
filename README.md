@@ -1,5 +1,5 @@
 # Introduction
-A AI chromium-based extension, created to optimize online buying experience. 
+An AI chromium-based extension, created to optimize online buying experience. 
 Product reviews can be a lot to read and getting a sense of the product quality and authenticity can be challenging. 
 This extension summarizes image reviews and text reviews and gives them a score of how much the delivered product matches the product shown by the seller.
 Gemini is used in this extension as the base model for the analysis of text and images.
@@ -16,7 +16,7 @@ https://nodejs.org/en/download
 
 
 # Importing the extension into Chrome/Edge
-1.	Download the extension files: Clone this repository by typing in “git clone https://github.com/SyedShahriyarAli/RealOne” in a command prompt at the destination you want to download the files
+1.	Download the extension files: Clone this repository by typing in “git clone https://github.com/Shaheer04/RealOne.git” in a command prompt at the destination you want to download the files
 2.	Open Chrome Extensions page: Open Google Chrome and go to the "Extensions" page. You can access it by clicking the three dots in the top-right corner, then selecting "More tools" > "Extensions," or by typing chrome://extensions/ in the address bar and hitting Enter.
 3.	Enable Developer Mode: Toggle on the "Developer mode" option located in the top-right corner of the Extensions page.
 4.	Load the extension: Click on the "Load unpacked" button that appears after enabling Developer mode. Navigate to the directory where you have the extension files saved, and select the folder containing the extension files.
