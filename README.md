@@ -5,7 +5,7 @@ Gemini is used as the base model for analysis of text and images.
 
 
 Install Node Packages:
-1.	nstall Node.js: Download and install Node.js from the official website. Node.js comes with npm (Node Package Manager) bundled with it. 
+1.	Install Node.js: Download and install Node.js from the official website. Node.js comes with npm (Node Package Manager) bundled with it. 
 https://nodejs.org/en/download
 2.	Install Required Packages: Use npm to install the required packages for your project. For a web scraping extension using Puppeteer. Install Puppeteer by typing this command at the terminal:
     npm install puppeteer
