@@ -1,8 +1,8 @@
 # Introduction
-A chromium-based extension, created to optimize online buying experience. 
+A AI chromium-based extension, created to optimize online buying experience. 
 Product reviews can be a lot to read and getting a sense of the product quality and authenticity can be challenging. 
 This extension summarizes image reviews and text reviews and gives them a score of how much the delivered product matches the product shown by the seller.
-Gemini is used as the base model for analysis of text and images.
+Gemini is used in this extension as the base model for the analysis of text and images.
 
 
 # Install Node Packages:
@@ -11,7 +11,7 @@ https://nodejs.org/en/download
 2.	Install Required Packages: Use npm to install the required packages for your project. For a web scraping extension using Puppeteer. Install Puppeteer by typing this command at the terminal:
     npm install puppeteer
 3.	Create a .env file in the API directory which will contain Gemini's API Key:
-       - API_Key=[API-Key]
+       - API_Key=[Your-API-Key]
 4. Start NPM: After installing packages, you can start using NPM commands.
 
 
