@@ -48,32 +48,38 @@ async function scrap(url) {
     var totalReviews = [];
 
     if (page.$('.ant-pagination-item') != null) {
-        var items = await page.$$('.ant-pagination-item');
-        var pages = parseInt(await (await items[items.length - 1].getProperty('innerText')).jsonValue());
-        var approx = pages * 3;
-        if (approx < 50) {
-            while (!page.$('.ant-pagination-item-link .anticon-right').parentNode.disabled) {
-                page.$('.ant-pagination-item-link .anticon-right').parentNode.click();
-                totalReviews = [...totalReviews, ...await getFormattedReviews()];
-            }
-        } else if (approx > 50 && approx < 100) {
-            await page.waitForSelector('.ant-select-selection-search-input');
-            await page.type('#rc_select_1', '50');
-            await page.keyboard.press('Enter');
-           // totalReviews = totalReviews.concat( await getFormattedReviews());
-                totalReviews = await getFormattedReviews();
+        await page.$$eval('.ant-pagination-item', (function temp (page) {
+            return async function  (items) {
+            var pages = parseInt(items[items.length - 1].innerText);
+            var approx = pages * 3;
+            if (approx < 50) {
+                while (!page.$('.ant-pagination-item-link .anticon-right').parentNode.disabled) {
+                    page.$('.ant-pagination-item-link .anticon-right').parentNode.click();
+
+                    totalReviews = totalReviews.concat(await getFormattedReviews());
+                }
+            } else if (approx > 50 && approx < 100) {
+                await page.waitForSelector('.ant-select-selection-search-input');
+                await page.type('#rc_select_1', '50');
+                await page.keyboard.press('Enter');
+                totalReviews = totalReviews.concat(await getFormattedReviews());
             } else if (approx > 100) {
-            await page.waitForSelector('.ant-select-selection-search-input');
-            await page.type('#rc_select_1', '100');
-            await page.keyboard.press('Enter');
-         //   totalReviews = totalReviews.concat( await getFormattedReviews());
-            totalReviews = await getFormattedReviews();
-        }
-        }
+                await page.waitForSelector('.ant-select-selection-search-input');
+                await page.type('#rc_select_1', '100');
+                await page.keyboard.press('Enter');
+                totalReviews = totalReviews.concat(await getFormattedReviews());
+                while (!page.$('.ant-pagination-item-link .anticon-right').parentNode.disabled) {
+                    page.$('.ant-pagination-item-link .anticon-right').parentNode.click();
+                    totalReviews = totalReviews.concat(await getFormattedReviews());
+                }
+            }
+            }
+        })(page))
+    }
 
     await browser.close();
 
-    return { descriptionImages, totalReviews };
+    return { descriptionImages, reviews };
 }
 
 module.exports = { scrap };
