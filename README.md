@@ -10,6 +10,8 @@ https://nodejs.org/en/download
 2.	Install Required Packages: Use npm to install the required packages for your project. For a web scraping extension using Puppeteer. Install Puppeteer by typing this command at the terminal:
     npm install puppeteer
 3.	Start NPM: After installing packages, you can start using NPM commands.
+
+
 Importing the extension into Chrome/Edge
 1.	Download the extension files: Clone this repository by typing in “git clone https://github.com/SyedShahriyarAli/RealOne” in a command prompt at the destination you want to download the files
 2.	Open Chrome Extensions page: Open Google Chrome and go to the "Extensions" page. You can access it by clicking the three dots in the top-right corner, then selecting "More tools" > "Extensions," or by typing chrome://extensions/ in the address bar and hitting Enter.
